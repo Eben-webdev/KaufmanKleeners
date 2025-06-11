@@ -1,7 +1,7 @@
 #img{
-  height:100px;
-  width:100px;
-  background-color:#ffff;
+ height:100px;
+ width:100px;
+ background-color:#ffff;
 }
 nav {
 background: linear-gradient(to  bottom, #003ea9, #faf6e6, #8db7e2);
@@ -10,7 +10,7 @@ width:50px;
 
 }
 .navlink{
-  color:#ffff;
-  font-family:orbitron;
+ color:#ffff;
+ font-family:orbitron;
 }
 
