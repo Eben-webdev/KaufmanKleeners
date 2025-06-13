@@ -14,4 +14,43 @@ width:50px;
  font-family:"impact";
  text-decoration:none;
 }
+body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      color: #333;
+      padding: 40px;
+      max-width: 600px;
+      margin: auto;
+    }
+h1 {
+      color: #003ea9;
+    }
+form {
+      background: #faf6e6;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+label {
+      display: block;
+      margin: 15px 0 5px;
+    }
+input, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+button {
+      background-color: #003ea9;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+button:hover {
+      background-color: #002f80;
+    }
 
