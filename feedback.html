@@ -1,26 +1,33 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Feedback Page</title>
-  </head>
+
+  <!-- hCaptcha script -->
+  <script src="https://hcaptcha.com/1/api.js" async defer></script>
+</head>
 <body>
   <h1>Send Us Your Feedback</h1>
+
   <form action="https://formspree.io/f/mrbkqwwl" method="POST">
-    <label for="name">Your Name</label>
-    <input type="text" name="name" id="name" required>
+    <label for="name">Your Name</label><br />
+    <input type="text" name="name" id="name" required><br /><br />
 
-    <label for="email">Your Email</label>
-    <input type="email" name="email" id="email" required>
+    <label for="email">Your Email</label><br />
+    <input type="email" name="email" id="email" required><br /><br />
 
-    <label for="message">Your Feedback</label>
-    <textarea name="message" id="message" rows="5" required></textarea>
+    <label for="message">Your Feedback</label><br />
+    <textarea name="message" id="message" rows="5" required></textarea><br /><br />
 
     <!-- hCaptcha widget -->
-    <div class="h-captcha" data-sitekey="b7d054fe-55fe-4126-97de-bb4ec0debe08"></div>
+    <div class="h-captcha" data-sitekey="your-site-key-here"></div><br />
 
     <button type="submit">Send Feedback</button>
   </form>
 </body>
 </html>
+
