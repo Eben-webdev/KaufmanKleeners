@@ -1,18 +1,14 @@
-:root {
-  --primary: #003ea9;
-  --bg: #faf6e6;
-  --accent: #8db7e2;
-}
+
 
 body {
   font-family: sans-serif;
-  background-color: var(--bg);
-  color: var(--primary);
+  background-color: #faf6e6;
+  color: #003ea9;
   margin: 0;
 }
 
 header, footer {
-  background-color: var(--primary);
+  background-color:#003ea9;
   color: white;
   padding: 1em 2em;
   text-align: center;
@@ -27,7 +23,7 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
-  color: var(--accent);
+  color: #8db7e2;
 }
 
 .container {
@@ -37,7 +33,7 @@ nav a:hover {
 }
 
 h1, h2 {
-  color: var(--primary);
+  color: #003ea9;
 }
 
 form input, form textarea {
@@ -49,7 +45,7 @@ form input, form textarea {
 }
 
 form button {
-  background-color: var(--primary);
+  background-color:#003ea9;
   color: white;
   border: none;
   padding: 0.75em 1.5em;
@@ -58,46 +54,6 @@ form button {
 }
 
 form button:hover {
-  background-color: var(--accent);
-  color: var(--primary);
+  background-color: #8db7e2;
+  color: #003ea9;
 }
-body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f4f8;
-      color: #333;
-      padding: 40px;
-      max-width: 600px;
-      margin: auto;
-    }
-h1 {
-      color: #003ea9;
-    }
-form {
-      background: #faf6e6;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-label {
-      display: block;
-      margin: 15px 0 5px;
-    }
-input, textarea {
-      width: 100%;
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-button {
-      background-color: #003ea9;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      margin-top: 15px;
-      cursor: pointer;
-    }
-button:hover {
-      background-color: #002f80;
-    }
-
