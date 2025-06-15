@@ -1,4 +1,66 @@
+:root {
+  --primary: #003ea9;
+  --bg: #faf6e6;
+  --accent: #8db7e2;
+}
 
+body {
+  font-family: sans-serif;
+  background-color: var(--bg);
+  color: var(--primary);
+  margin: 0;
+}
+
+header, footer {
+  background-color: var(--primary);
+  color: white;
+  padding: 1em 2em;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 1em;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: var(--accent);
+}
+
+.container {
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 1em;
+}
+
+h1, h2 {
+  color: var(--primary);
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 0.75em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.75em 1.5em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: var(--accent);
+  color: var(--primary);
+}
 body {
       font-family: Arial, sans-serif;
       background-color: #f0f4f8;
