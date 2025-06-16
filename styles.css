@@ -50,3 +50,7 @@ form button:hover {
   background-color: #8db7e2;
   color: #003ea9;
 }
+.error{
+  font-family:verdana;
+  font-weight: 700; /* 700 is equivalent to bold */
+}
