@@ -76,3 +76,8 @@ form button:hover {
 #error7{
   position:relative;
 }
+#logonav{
+  position:fixed;
+  top:0;
+  left:0;
+}
