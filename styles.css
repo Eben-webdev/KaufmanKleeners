@@ -1,4 +1,6 @@
-
+#404body{
+  image-background:url(https://media.tenor.com/18SBZln9s3AAAAAC/black-space-outer-space.gif);
+}
 body {
   font-family: sans-serif;
   background-color: #faf6e6;
@@ -25,7 +27,6 @@ nav a:hover {
   max-width: 800px;
   margin: 2em auto;
   padding: 1em;
-  background-image: url("");
 }
 h1, h2 {
   color: #003ea9;
