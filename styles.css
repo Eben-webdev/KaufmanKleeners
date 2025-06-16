@@ -25,6 +25,7 @@ nav a:hover {
   max-width: 800px;
   margin: 2em auto;
   padding: 1em;
+  background-image: url("");
 }
 h1, h2 {
   color: #003ea9;
