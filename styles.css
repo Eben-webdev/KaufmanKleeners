@@ -27,6 +27,7 @@ header, footer {
   align-items: center;
   padding: 10px 20px;
   background-color: #003ea9;
+  word-spacing:30px;
 }
 
 .nav-left,
