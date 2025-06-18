@@ -1,4 +1,5 @@
 // Check if this is sign-in page
+// Sign In
 const loginForm = document.getElementById("loginForm");
 if (loginForm) {
   loginForm.addEventListener("submit", function (e) {
@@ -13,7 +14,6 @@ if (loginForm) {
     if (users[email] && users[email] === password) {
       loginMessage.style.color = "green";
       loginMessage.textContent = "Login successful!";
-      // Redirect if needed
     } else {
       loginMessage.style.color = "red";
       loginMessage.textContent = "Invalid email or password.";
@@ -21,7 +21,7 @@ if (loginForm) {
   });
 }
 
-// Check if this is sign-up page
+// Sign Up
 const signupForm = document.getElementById("signupForm");
 if (signupForm) {
   signupForm.addEventListener("submit", function (e) {
@@ -45,10 +45,10 @@ if (signupForm) {
       localStorage.setItem("users", JSON.stringify(users));
       signupMessage.style.color = "green";
       signupMessage.textContent = "Sign up successful! Redirecting...";
-
       setTimeout(() => {
         window.location.href = "sign-in.html";
       }, 1500);
     }
   });
 }
+
