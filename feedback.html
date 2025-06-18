@@ -8,27 +8,17 @@
   <script src="https://hcaptcha.com/1/api.js" async defer></script>
 </head>
 <body>
-  <h1>Send Us Your Feedback!</h1>
-  <form action="https://formspree.io/f/mrbkqwwl" method="POST" id="myForm">
-    <div>
-      <input type="text" placeholder="Full Name" name="name" id="name" class="form" required>
-    </div>
-
-    <div>
-      <input type="email" placeholder="Email" name="email" id="email" class="form" required>
-    </div>
-
-    <div>
+  <div class="container">
+    <h1>Send Us Your Feedback!</h1>
+    <form action="https://formspree.io/f/mrbkqwwl" method="POST" id="myForm">
+      <input type="text" placeholder="Full Name" name="name" id="name" class="form" required />
+      <input type="email" placeholder="Email" name="email" id="email" class="form" required />
       <textarea placeholder="Message" name="message" id="message" rows="10" class="form" required></textarea>
-    </div>
-
-    <div class="h-captcha" data-sitekey="d92a35ae-76a4-4f2c-93ba-b3c4dc26e750" id="captcha"></div>
-
-    <button type="submit" class="form" id="submit">Send Feedback</button>
-  </form>
-
-  <h6 id="note">Note: If the text is still there after submitting feedback, you have not verified our hCaptcha.</h6>
-  <h6 id="arssup">&copy;2025 Kaufman Kleeners. All Rights Reserved.</h6>
-
+      <div class="h-captcha" data-sitekey="d92a35ae-76a4-4f2c-93ba-b3c4dc26e750" id="captcha"></div>
+      <button type="submit" class="form" id="submit">Send Feedback</button>
+    </form>
+    <h6 id="note">Note: If the text is still there after submitting feedback, you have not verified our hCaptcha.</h6>
+    <h6 id="arssup">&copy;2025 Kaufman Kleeners. All Rights Reserved.</h6>
+  </div>
 </body>
 </html>
