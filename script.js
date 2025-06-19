@@ -1,54 +1,38 @@
-// Check if this is sign-in page
-// Sign In
-const loginForm = document.getElementById("loginForm");
-if (loginForm) {
-  loginForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const email = document.getElementById("loginEmail").value.trim();
-    const password = document.getElementById("loginPassword").value.trim();
-    const loginMessage = document.getElementById("loginMessage");
-
-    const users = JSON.parse(localStorage.getItem("users") || "{}");
-
-    if (users[email] && users[email] === password) {
-      loginMessage.style.color = "green";
-      loginMessage.textContent = "Login successful!";
-    } else {
-      loginMessage.style.color = "red";
-      loginMessage.textContent = "Invalid email or password.";
+// Redirect to sign-in if not logged in
+if (window.location.pathname.includes("index.html")) {
+  const email = localStorage.getItem("currentUser");
+  if (!email) {
+    window.location.href = "sign-in.html";
+  } else {
+    const profileDisplay = document.getElementById("profileDisplay");
+    if (profileDisplay) {
+      profileDisplay.textContent = `Logged in as: ${email}`;
     }
-  });
+  }
 }
 
-// Sign Up
-const signupForm = document.getElementById("signupForm");
-if (signupForm) {
-  signupForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const email = document.getElementById("signupEmail").value.trim();
-    const password = document.getElementById("signupPassword").value.trim();
-    const signupMessage = document.getElementById("signupMessage");
-
-    if (!email || !password) {
-      signupMessage.textContent = "Please fill in all fields.";
-      return;
-    }
-
-    const users = JSON.parse(localStorage.getItem("users") || "{}");
-
-    if (users[email]) {
-      signupMessage.textContent = "User already exists.";
-    } else {
-      users[email] = password;
-      localStorage.setItem("users", JSON.stringify(users));
-      signupMessage.style.color = "green";
-      signupMessage.textContent = "Sign up successful! Redirecting...";
-      setTimeout(() => {
-        window.location.href = "sign-in.html";
-      }, 1500);
-    }
-  });
+// Logout
+function logout() {
+  localStorage.removeItem("currentUser");
+  window.location.href = "sign-in.html";
 }
 
+// Delete Account
+function confirmDelete() {
+  const enteredPass = document.getElementById("deletePassword").value.trim();
+  const email = localStorage.getItem("currentUser");
+  const users = JSON.parse(localStorage.getItem("users") || "{}");
+  const msg = document.getElementById("deleteMessage");
+
+  if (users[email] && users[email] === enteredPass) {
+    delete users[email];
+    localStorage.setItem("users", JSON.stringify(users));
+    localStorage.removeItem("currentUser");
+    msg.style.color = "green";
+    msg.textContent = "Account deleted. Redirecting...";
+    setTimeout(() => window.location.href = "sign-up.html", 2000);
+  } else {
+    msg.style.color = "red";
+    msg.textContent = "Incorrect password.";
+  }
+}
